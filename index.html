@@ -95,20 +95,20 @@ body{
 .uni .u1 .en{font-size:min(2.72vw,18.4px)}
 
 /* 2 — тоонууд */
-.nums{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(14px,5vw,64px)}
+.nums{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(12px,4vw,64px);max-width:calc(100vw - 72px)}
 .num{display:grid;justify-items:center;gap:clamp(8px,1.4vh,14px);opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.2,.9,.3,1)}
 .num:last-child{transition-delay:.35s}
 .s2.on .num{opacity:1;transform:none}
 .digits{font-family:var(--sans);font-weight:800;line-height:1;letter-spacing:-.02em;
-  font-size:clamp(84px,min(24vw,22vh),200px);
+  font-size:clamp(56px,min(18.5vw,22vh),200px);
   font-variant-numeric:lining-nums tabular-nums;
   background:linear-gradient(180deg,#FFF7B8 0%,var(--yellow) 48%,var(--gold-deep) 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 8px 26px rgba(0,0,0,.35))}
 .digits sup{font-size:.22em;font-weight:700;letter-spacing:.04em;vertical-align:top;position:relative;top:.55em;margin-left:.08em}
 .dg{display:flex;align-items:baseline;gap:.18em}
-.dg .dx{font-weight:700;font-size:clamp(16px,min(4vw,3.4vh),30px);color:var(--yellow);letter-spacing:.02em}
-.num .lbl{font-size:clamp(10px,1.6vw,14px);letter-spacing:.2em;text-transform:uppercase;color:var(--sage);font-weight:600;line-height:1.45}
+.dg .dx{font-weight:700;font-size:clamp(12px,min(3.6vw,3.4vh),30px);color:var(--yellow);letter-spacing:.02em}
+.num .lbl{font-size:clamp(9.5px,1.6vw,14px);letter-spacing:.14em;white-space:nowrap;text-transform:uppercase;color:var(--sage);font-weight:600;line-height:1.45}
 .num .lbl b{display:block;color:var(--cream);font-weight:700}
 .vline{width:1px;align-self:stretch;background:linear-gradient(transparent,var(--yellow),transparent);opacity:0;transition:opacity 1s ease .5s}
 .s2.on .vline{opacity:.7}
