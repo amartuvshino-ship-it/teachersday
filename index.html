@@ -6,7 +6,7 @@
 <title>Багш нарын баярын урилга</title>
 <meta name="description" content="ХААИС — Дэлхийн багш нарын 32 дахь, Монголын багш нарын 60 дахь баярын урилга">
 <meta property="og:title" content="Урилга — ХААИС Багш нарын хурал, өдөрлөг 2026">
-<meta property="og:description" content="2026 оны 10-р сарын 02 · 17:00 · Зайсанхилл">
+<meta property="og:description" content="2026 оны 10-р сарын 02 · 17:00 · Зайсан хилл">
 <meta name="theme-color" content="#00301C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -214,6 +214,7 @@ main{position:relative;z-index:5;padding-inline:16px;padding-block:28px 56px;dis
 .body{margin:20px auto 0;max-width:32em;text-align:center;font-size:15px;line-height:1.75}
 .body p{margin:0 0 12px}
 .body .lead{font-size:18px;line-height:1.6;margin-bottom:16px}
+.thanks .tl1{display:block;text-wrap:balance}
 .body strong{color:var(--gold);font-weight:600}
 .body .thanks{font-family:var(--serif);font-style:italic;font-weight:600;font-size:19.5px;line-height:1.5;color:var(--sage)}
 
@@ -376,13 +377,13 @@ main{position:relative;z-index:5;padding-inline:16px;padding-block:28px 56px;dis
 
         <div class="body rev" style="--i:4">
           <p class="lead"><strong>Багш нарын баярт</strong> хүрэлцэн ирэхийг урьж байна.</p>
-          <p class="thanks">Эрдэм мэдлэгээ харамгүй түгээж, үе үеийн шавь нараа чадварлаг мэргэжилтэн болгон төлөвшүүлж буй Таны хөдөлмөрт гүн талархал илэрхийлье.</p>
+          <p class="thanks"><span class="tl1">Эрдэм мэдлэгээ харамгүй түгээж, үе үеийн шавь нараа чадварлаг мэргэжилтэн болгон төлөвшүүлж&nbsp;буй</span><span class="tl1">Таны хөдөлмөрт гүн талархал илэрхийлье.</span></p>
         </div>
 
         <dl class="facts rev" style="--i:5">
           <div class="fact"><dt>Огноо</dt><dd>2026 оны 10-р сарын <span class="nw">02-ны өдөр</span><small>Баасан гараг</small></dd></div>
           <div class="fact"><dt>Цаг</dt><dd>17:00 – 22:00<small>Зочдыг 16:30 цагаас угтана</small></dd></div>
-          <div class="fact"><dt>Байршил</dt><dd class="place">Зайсанхилл</dd></div>
+          <div class="fact"><dt>Байршил</dt><dd class="place">Зайсан хилл</dd></div>
         </dl>
 
         <div class="sign rev only-d" style="--i:6">
@@ -405,8 +406,8 @@ main{position:relative;z-index:5;padding-inline:16px;padding-block:28px 56px;dis
           <li class="key"><time>18:35</time><div class="w"><b>ХААИС-ийн оны шилдэгүүдэд шагнал гардуулах ёслол</b>
             <ul><li>Оны шилдэг Залуу багш</li><li>Оны шилдэг Судлаач багш</li><li>Оны шилдэг Сурган хүмүүжүүлэгч багш</li><li>Оны шилдэг Тэнхим</li><li>Оны шилдэг Сургууль</li></ul></div></li>
           <li class="dim"><time>19:15</time><div class="w">Хүндэтгэлийн зоог</div></li>
-          <li><time>19:45</time><div class="w"><b>Бүрэлдэхүүн сургуулиудын мэндчилгээ</b>
-            <ul><li>Мал эмнэлгийн сургууль</li><li>Мал аж ахуй, биотехнологийн сургууль</li><li>Инженер технологийн сургууль</li><li>Агроэкологийн сургууль</li><li>Эдийн засаг, бизнесийн сургууль</li><li>Хэрэглээний шинжлэх ухааны сургууль</li></ul></div></li>
+          <li><time>19:45</time><div class="w"><b>Бүрэлдэхүүн, салбар сургуулиудын мэндчилгээ</b>
+            <ul><li>Мал эмнэлгийн сургууль</li><li>Мал аж ахуй, биотехнологийн сургууль</li><li>Инженер технологийн сургууль</li><li>Агроэкологийн сургууль</li><li>Эдийн засаг, бизнесийн сургууль</li><li>Хэрэглээний шинжлэх ухааны сургууль</li><li>Баянхонгор аймаг дахь салбар сургууль</li><li>Дархан-Уул аймаг дахь салбар сургууль</li></ul></div></li>
           <li><time>20:30</time><div class="w">Бүжиг, чөлөөт цаг</div></li>
           <li class="key"><time>21:50</time><div class="w"><b>Хаалт</b><span class="by">ЭЗБС-ийн захирал, доктор, дэд профессор Т.Эрдэнэчулуун</span></div></li>
         </ol>
@@ -636,8 +637,8 @@ main{position:relative;z-index:5;padding-inline:16px;padding-block:28px 56px;dis
   function hideHint(){ hint.classList.remove("on"); }
   function offerHint(){ clearTimeout(hintTimer); hintTimer=setTimeout(function(){ if(canScroll() && window.scrollY<40) hint.classList.add("on"); }, 1800); }
   window.addEventListener("scroll", function(){
-    if(window.scrollY>60) hideHint();
-    else if(!intro.classList.contains("gone")) hideHint();
+    if(!intro.classList.contains("gone") || window.scrollY>60) hideHint();
+    else if(window.scrollY<40 && canScroll()) hint.classList.add("on");   // дээш буцахад дахин гарна
   }, {passive:true});
   hint.addEventListener("click", function(){ window.scrollBy({top:window.innerHeight*0.7, behavior:"smooth"}); hideHint(); });
 
