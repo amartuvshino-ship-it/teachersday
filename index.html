@@ -159,12 +159,12 @@ body{
 @media (max-width:420px){ .fs-tip{top:calc(70px + env(safe-area-inset-top,0px))} }
 /* ---- доош гүйлгэх заавар ---- */
 .scroll-hint{position:fixed;z-index:25;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);
-  display:grid;justify-items:center;gap:2px;padding:10px 18px 8px;border-radius:40px;cursor:pointer;
-  font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
-  background:rgba(0,40,23,.78);border:1px solid rgba(255,221,0,.4);backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,.35);
+  display:grid;place-items:center;width:56px;height:56px;padding:0;cursor:pointer;
+  color:var(--yellow);background:none;border:0;filter:drop-shadow(0 0 8px rgba(255,221,0,.55)) drop-shadow(0 2px 6px rgba(0,0,0,.5));
   opacity:0;pointer-events:none;transition:opacity .6s ease, transform .6s ease}
 .scroll-hint.on{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
-.scroll-hint svg{width:22px;height:22px;margin-top:4px;animation:nudge 1.6s ease-in-out infinite}
+.scroll-hint svg{width:36px;height:36px;animation:nudge 1.6s ease-in-out infinite}
+.scroll-hint:focus-visible{outline:2px solid var(--yellow);outline-offset:2px;border-radius:50%}
 .scroll-hint svg path:nth-child(2){animation:fadeC 1.6s ease-in-out infinite}
 @keyframes nudge{0%,100%{transform:translateY(-3px)}50%{transform:translateY(4px)}}
 @keyframes fadeC{0%,100%{opacity:.35}50%{opacity:1}}
@@ -213,6 +213,7 @@ main{position:relative;z-index:5;padding-inline:16px;padding-block:28px 56px;dis
 
 .body{margin:20px auto 0;max-width:32em;text-align:center;font-size:15px;line-height:1.75}
 .body p{margin:0 0 12px}
+.body .lead{font-size:18px;line-height:1.6;margin-bottom:16px}
 .body strong{color:var(--gold);font-weight:600}
 .body .thanks{font-family:var(--serif);font-style:italic;font-weight:600;font-size:19.5px;line-height:1.5;color:var(--sage)}
 
@@ -330,13 +331,13 @@ main{position:relative;z-index:5;padding-inline:16px;padding-block:28px 56px;dis
     <div class="tan" id="tanIntro">танаа</div>
   </div></div>
 </section>
-<button class="skip" id="skip" type="button">Алгасах ›</button>
+<span id="skip" hidden></span>
 <button class="fs-btn" id="fsBtn" type="button" aria-label="Бүтэн дэлгэц" hidden>
   <svg class="en" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
   <svg class="ex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
 </button>
 <div class="fs-tip" id="fsTip">Дэлгэцэд хүрч бүтэн дэлгэцээр үзнэ үү</div>
-<button class="scroll-hint" id="scrollHint" type="button" aria-label="Доош гүйлгэх">Доош гүйлгэнэ үү
+<button class="scroll-hint" id="scrollHint" type="button" aria-label="Доош гүйлгэх">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l6 6 6-6"/><path d="M6 12l6 6 6-6"/></svg>
 </button>
 
@@ -373,7 +374,7 @@ main{position:relative;z-index:5;padding-inline:16px;padding-block:28px 56px;dis
         </div>
 
         <div class="body rev" style="--i:4">
-          <p>Дэлхийн багш нарын 32 дахь, Монголын багш нарын 60 дахь өдрийн баярыг тохиолдуулан зохион байгуулж буй <strong>Хөдөө аж ахуйн их сургуулийн 2026–2027 оны хичээлийн жилийн Багш нарын хурал, өдөрлөг</strong>т хүрэлцэн ирж, баярын өдрийг хамтдаа тэмдэглэхийг хүндэтгэн урьж байна.</p>
+          <p class="lead"><strong>Багш нарын баярт</strong> хүрэлцэн ирэхийг урьж байна.</p>
           <p class="thanks">Эрдэм мэдлэгээ харамгүй түгээж, үе үеийн шавь нараа эрдэмтэн мэргэд болгон өсгөж буй Таны хөдөлмөрт гүн талархал илэрхийлье.</p>
         </div>
 
